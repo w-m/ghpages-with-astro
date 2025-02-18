@@ -1,5 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+    "extends": "astro/tsconfigs/strict",
+    "include": [".astro/types.d.ts", "**/*"],
+    "exclude": ["dist"],
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@config": ["src/config.jsonc"],
+            "@layouts/*": ["src/layouts/*"],
+            "@styles/*": ["src/styles/*"]
+        }
+    }
 }

@@ -1,0 +1,33 @@
+{
+    // Basic information
+    "title": "Your Name",
+    "position": "Ph.D. Student",
+    "affiliation": "Your affiliation",
+    "email": "yourname (at) example.edu",
+
+    // Search Engine Optimization (SEO)
+    // The following information is used to improve the website traffic from search engines, e.g., Google.
+    "keywords": "minimal light",
+    "description": "A minimal and light academic personal website template built with Astro.",
+    "canonical": "https://ghpages-with-astro.mplabs.cloud/",
+
+    // Links
+    // If you don't need one of them, you may delete the corresponding line.
+    "google_scholar": "https://scholar.google.com/",
+    "cv_link": "assets/files/curriculum_vitae.pdf",
+    "github_link": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "twitter": "https://twitter.com/",
+
+    // Images (e.g., your profile picture and your website's favicon)
+    "avatar": "./assets/img/avatar.png",
+    "apple_touch_icon": "./assets/img/apple_touch_icon.png",
+    "favicon-23": "./assets/img/favicon-32x32.png",
+    "favicon-16": "./assets/img/favicon-16x16.png",
+    "favicon-svg": "./assets/img/favicon.svg",
+    "theme-color": "#fbfbf8",
+
+    // Auto Dark Mode
+    // You may use the option to disable the automatic dark theme
+    "auto_dark_mode": true,
+}
