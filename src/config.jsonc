@@ -3,7 +3,7 @@
     "title": "Your Name",
     "position": "Ph.D. Student",
     "affiliation": "Your affiliation",
-    "email": "yourname (at) example.edu",
+    "email": "yourname@example.edu",
 
     // Search Engine Optimization (SEO)
     // The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -13,11 +13,12 @@
 
     // Links
     // If you don't need one of them, you may delete the corresponding line.
-    "google_scholar": "https://scholar.google.com/",
-    "cv_link": "assets/files/curriculum_vitae.pdf",
-    "github_link": "https://github.com/",
-    "linkedin": "https://www.linkedin.com/",
-    "twitter": "https://twitter.com/",
+    "links": [
+        { "title": "Curriculum Vitæ", "href": "assets/files/curriculum_vitae.pdf", "icon": "cv" },
+        { "title": "GitHub", "href": "https://github.com/mplabs", "icon": "github" },
+        { "title": "LinkedIn", "href": "https://www.linkedin.com/mplabs", "icon": "linkedin" },
+        { "title": "Mastodon", "href": "https://mastodon.social/@mplabs", "icon": "mastodon" }
+    ],
 
     // Images (e.g., your profile picture and your website's favicon)
     "avatar": "./assets/img/avatar.png",
@@ -29,5 +30,5 @@
 
     // Auto Dark Mode
     // You may use the option to disable the automatic dark theme
-    "auto_dark_mode": true,
+    "auto_dark_mode": true
 }

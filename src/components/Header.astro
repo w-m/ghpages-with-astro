@@ -1,0 +1,27 @@
+---
+import Icon from '@components/Icon.astro'
+import config from '@config'
+import { Image } from 'astro:assets'
+import avatarImage from '../assets/avatar.png'
+---
+
+<header class="flex flex-col items-center mx-4 pb-4 border-b border-slate-300">
+    <h1 class="mb-4 text-center">
+        <Image class="rounded-full mb-4" src={avatarImage} height={250} alt={config.title} />
+        <span class="block text-4xl">{config.title}</span>
+    </h1>
+    <span class="block text-xl mb-2">{config.position}</span>
+    <span class="block text-xl mb-2">{config.affiliation}</span>
+    <a class="mb-2" href={`mailto:${config.email}`}>{config.email}</a>
+    <div class="flex">
+        {
+            config.links &&
+                config.links.map((link: (typeof config.link)[0]) => (
+                    <a class="block me-4 last-of-type:me-0" href={link.href} target="_blank">
+                        <Icon icon={link.icon} class="w-4 h-4" title={link.title} />
+                        <span class="sr-only">{link.title}</span>
+                    </a>
+                ))
+        }
+    </div>
+</header>
