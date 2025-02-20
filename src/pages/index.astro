@@ -1,9 +1,15 @@
 ---
 import BaseHead from '@components/BaseHead.astro'
 import Header from '@components/Header.astro'
-import '@styles/global.css'
-import background from '../assets/background.svg'
 import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
+import config from '@config'
+
+import '@styles/global.css'
+
+import background from '../assets/background.svg'
+import teaser from '../assets/teaser_example-2.png'
+import teaser2 from '../assets/teaser_example_2-2.png'
 
 const allNews = await getCollection('news')
 
@@ -17,7 +23,7 @@ const allNews = await getCollection('news')
     <body
         class="font-serif font-normal leading-normal text-gray-800 font-sm md:font-base text-pretty"
     >
-        <div id="site-wrapper" class="flex flex-col md:flex-row min-h-screen">
+        <div id="site-wrapper" class="flex flex-col lg:flex-row min-h-screen">
             <!-- Skip to main conetnt -->
             <a
                 href="#main-content"
@@ -77,8 +83,87 @@ const allNews = await getCollection('news')
                 <!-- Publications -->
                 <section id="publications" class="mb-8 px-4">
                     <h2 class="text-2xl pb-2">Publications</h2>
+                    <ul>
+                        <li>
+                            <article class="flex flex-row gap-4 mb-4">
+                                <figure class="relative flex-3">
+                                    <Image class="shadow rounded" src={teaser} alt="Continual Learning for Abdominal Multi-Organ and Tumor Segmentation" />
+                                    <figcaption class="text-xs text-gray-700">Continual Learning for Abdominal Multi-Organ and Tumor Segmentation</figcaption>
+                                    <span class="absolute top-1 left-0 text-xs bg-blue-900 text-white p-1 shadow">MICCAI</span>
+                                </figure>
+                                <div class="flex-6">
+                                    <h3 class="text-blue-950 font-bold mb-2"><a href="assets/pdf/2306.00988v2.pdf">Continual Learning for Abdominal Multi-Organ and Tumor Segmentation</a></h3>
+                                    <span class="authors mb-2">Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)</span>
+                                    <span class="conference italic mb-2">International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.</span>
+                                    <ul class="tags my-4 flex flex-row text-xs">
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="assets/pdf/2306.00988v2.pdf" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">PDF</a>
+                                        </li>
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="https://github.com/MrGiovanni/ContinualLearning" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Code</a>
+                                        </li>
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="https://bib.yliu.me/MICCAI23.txt" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">BibTex</a>
+                                        </li>
+                                        <li class="text-nowrap italic font-bold text-red-600">Early Accept</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="flex flex-row gap-4 mb-4">
+                                <figure class="relative flex-3">
+                                    <Image class="shadow rounded" src={teaser} alt="Mnemonics Training: Multi-Class Incremental Learning without Forgetting" />
+                                    <figcaption class="text-xs text-gray-700">Mnemonics Training: Multi-Class Incremental Learning without Forgetting</figcaption>
+                                    <span class="absolute top-1 left-0 text-xs bg-blue-900 text-white p-1 shadow">CVPR</span>
+                                </figure>
+                                <div class="flex-6">
+                                    <h3 class="text-blue-950 font-bold mb-2"><a href="assets/pdf/2002.10211v6.pdf">Mnemonics Training: Multi-Class Incremental Learning without Forgetting</a></h3>
+                                    <span class="authors mb-2"><strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun</span>
+                                    <span class="conference italic mb-2">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)<strong>, 2020</strong>.</span>
+                                    <ul class="tags my-4 flex flex-row text-xs">
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="assets/pdf/2002.10211v6.pdf" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">PDF</a>
+                                        </li>
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Code</a>
+                                        </li>
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="https://class-il.mpi-inf.mpg.de/mnemonics/" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Project Page</a>
+                                        </li>
+                                        <li class="text-nowrap p-1 mb-2 me-2">
+                                            <a href="https://class-il.mpi-inf.mpg.de/mnemonics/" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">BibTex</a>
+                                        </li>
+                                        <li class="text-nowrap italic font-bold text-red-600">Oral Presentation</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Services -->
+                <section id="services" class="mb-8 px-4">
+                    <h2 class="text-2xl mb-2">Services</h2>
+
+                    <h3 class="font-bold text-blue-950 mb-2">Conference Reviews</h3>
+                    <ul class="list-disc ms-4">
+                        <li><a href="http://cvpr2023.thecvf.com/" target="_blank">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2021-2023</a></li>
+                        <li><a href="http://iccv2021.thecvf.com/" target="_blank">IEEE/CVF International Conference on Computer Vision (ICCV) 2021</a></li>
+                        <li><a href="https://eccv2022.ecva.net/" target="_blank">European Conference on Computer Vision (ECCV) 2022</a></li>
+                    </ul>
+                    
+                    <h3 class="font-bold text-blue-950 mb-2">Journal Reviews</h3>
+                    <ul class="list-disc ms-4">
+                        <li><a href="https://www.computer.org/csdl/journal/tp" target="_blank">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</a></li>
+                        <li><a href="https://www.springer.com/journal/11263" target="_blank">International Journal of Computer Vision (IJCV)</a></li>
+                    </ul>
                 </section>
             </main>
+
+            <footer class="w-full text-center my-8">
+                <span class="copyright text-xs text-slate-600">©️ {new Date().getFullYear()} {config.author} - Powered by <a class="underline" href="https://github.com/mplabs/ghpages-with-astro" target="_blank">GitHub Pages with Astro</a>.</span>
+            </footer>
         </div>
     </body>
 </html>

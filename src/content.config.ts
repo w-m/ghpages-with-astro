@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content'
-import { glob, file } from 'astro/loaders'
+import { file } from 'astro/loaders'
 
 const news = defineCollection({
     loader: file('src/data/news.yml'),

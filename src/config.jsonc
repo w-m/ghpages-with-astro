@@ -7,6 +7,7 @@
 
     // Search Engine Optimization (SEO)
     // The following information is used to improve the website traffic from search engines, e.g., Google.
+    "author": "Your Name",
     "keywords": "minimal light",
     "description": "A minimal and light academic personal website template built with Astro.",
     "canonical": "https://ghpages-with-astro.mplabs.cloud/",
