@@ -23,7 +23,7 @@ const allNews = await getCollection('news')
     <body
         class="font-serif font-normal leading-normal text-gray-800 font-sm md:font-base text-pretty"
     >
-        <div id="site-wrapper" class="flex flex-col lg:flex-row min-h-screen">
+        <div id="site-wrapper" class="flex flex-col lg:flex-row h-screen">
             <!-- Skip to main conetnt -->
             <a
                 href="#main-content"
@@ -34,7 +34,7 @@ const allNews = await getCollection('news')
 
             <Header />
 
-            <main id="main-content" class="mx-4">
+            <main id="main-content" class="flex-2  mx-4 lg:mt-8 overflow-x-auto">
                 <!-- Blurry background -->
                 <img
                     id="background"
@@ -159,11 +159,12 @@ const allNews = await getCollection('news')
                         <li><a href="https://www.springer.com/journal/11263" target="_blank">International Journal of Computer Vision (IJCV)</a></li>
                     </ul>
                 </section>
+
+                <footer class="w-full text-center my-8">
+                    <span class="copyright text-xs text-slate-600">©️ {new Date().getFullYear()} {config.author} - Powered by <a class="underline" href="https://github.com/mplabs/ghpages-with-astro" target="_blank">GitHub Pages with Astro</a>.</span>
+                </footer>
             </main>
 
-            <footer class="w-full text-center my-8">
-                <span class="copyright text-xs text-slate-600">©️ {new Date().getFullYear()} {config.author} - Powered by <a class="underline" href="https://github.com/mplabs/ghpages-with-astro" target="_blank">GitHub Pages with Astro</a>.</span>
-            </footer>
         </div>
     </body>
 </html>
