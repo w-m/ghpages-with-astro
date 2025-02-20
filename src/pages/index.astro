@@ -1,9 +1,12 @@
 ---
 import BaseHead from '@components/BaseHead.astro'
 import Header from '@components/Header.astro'
-import Welcome from '@components/Welcome.astro'
 import '@styles/global.css'
 import background from '../assets/background.svg'
+import { getCollection } from 'astro:content'
+
+const allNews = await getCollection('news')
+
 ---
 
 <!doctype html>
@@ -56,33 +59,25 @@ import background from '../assets/background.svg'
                     </ul>
                 </section>
 
-				<!-- News -->
-				<section id="news" class="mb-8 px-4">
-					<h2 class="text-2xl pb-2">News</h2>
-					<dl class="divide-y divide-gray-700">
-						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-							<dt class="text-sm/6 font-medium text-gray-90">Feb. 2025</dt>
-							<dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Our paper about incremental learning is accepted to CVPR 2025.</dd>
-						</div>
-						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-							<dt class="text-sm/6 font-medium text-gray-90">Feb. 2025</dt>
-							<dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">We will host the ACM Multimedia Asia 2025 conference in Singapore!</dd>
-						</div>
-						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-							<dt class="text-sm/6 font-medium text-gray-90">Sept. 2024</dt>
-							<dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0"> Our paper about few-shot learning is accepted to NeurIPS 2024.</dd>
-						</div>
-						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-							<dt class="text-sm/6 font-medium text-gray-90">Mar. 2024</dt>
-							<dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Our paper about few-shot learning is accepted to CVPR 2024.</dd>
-						</div>
-					</dl>
-				</section>
+                <!-- News -->
+                <section id="news" class="mb-8 px-4">
+                    <h2 class="text-2xl pb-2">News</h2>
+                    <dl class="divide-y divide-gray-700">
+                        {allNews.map(({ data: news }) => (
+                            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                <dt class="text-sm/6 font-medium text-gray-90">{news.date}</dt>
+                                <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+                                    {news.href ? (<a href={news.href} target="_blank">{news.title}</a>) : (<Fragment>{news.title}</Fragment>)}
+                                </dd>
+                            </div>
+                        ))}
+                    </dl>
+                </section>
 
-				<!-- Publications -->
-				<section id="publications" class="mb-8 px-4">
-					<h2 class="text-2xl pb-2">Publications</h2>
-				</section>
+                <!-- Publications -->
+                <section id="publications" class="mb-8 px-4">
+                    <h2 class="text-2xl pb-2">Publications</h2>
+                </section>
             </main>
         </div>
     </body>
