@@ -1,13 +1,13 @@
 {
     // Basic information
-    "title": "Your Name",
-    "position": "Ph.D. Student",
-    "affiliation": "Your affiliation",
-    "email": "yourname@example.edu",
+    "title": "Wieland Morgenstern",
+    "position": "Research Associate",
+    "affiliation": "Fraunhofer HHI",
+    "email": "wm@morgenst.de",
 
     // Search Engine Optimization (SEO)
     // The following information is used to improve the website traffic from search engines, e.g., Google.
-    "author": "Your Name",
+    "author": "Wieland Morgenstern",
     "keywords": "minimal light",
     "description": "A minimal and light academic personal website template built with Astro.",
     "canonical": "https://ghpages-with-astro.mplabs.cloud/",
@@ -16,9 +16,9 @@
     // If you don't need one of them, you may delete the corresponding line.
     "links": [
         { "title": "Curriculum Vitæ", "href": "assets/files/curriculum_vitae.pdf", "icon": "cv" },
-        { "title": "GitHub", "href": "https://github.com/mplabs", "icon": "github" },
-        { "title": "LinkedIn", "href": "https://www.linkedin.com/mplabs", "icon": "linkedin" },
-        { "title": "Mastodon", "href": "https://mastodon.social/@mplabs", "icon": "mastodon" }
+        { "title": "GitHub", "href": "https://github.com/w-m", "icon": "github" },
+        { "title": "LinkedIn", "href": "https://www.linkedin.com/in/wiemo", "icon": "linkedin" },
+        // { "title": "Mastodon", "href": "https://mastodon.social/@mplabs", "icon": "mastodon" }
     ],
 
     // Images (e.g., your profile picture and your website's favicon)
