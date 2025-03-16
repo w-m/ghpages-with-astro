@@ -24,7 +24,7 @@
     // Images (e.g., your profile picture and your website's favicon)
     "avatar": "./assets/img/avatar.png",
     "apple_touch_icon": "./assets/img/apple_touch_icon.png",
-    "favicon-23": "./assets/img/favicon-32x32.png",
+    "favicon-32": "./assets/img/favicon-32x32.png",
     "favicon-16": "./assets/img/favicon-16x16.png",
     "favicon-svg": "./assets/img/favicon.svg",
     "theme-color": "#fbfbf8",
