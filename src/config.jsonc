@@ -18,7 +18,10 @@
         { "title": "Curriculum Vitæ", "href": "assets/files/curriculum_vitae.pdf", "icon": "cv" },
         { "title": "GitHub", "href": "https://github.com/w-m", "icon": "github" },
         { "title": "LinkedIn", "href": "https://www.linkedin.com/in/wiemo", "icon": "linkedin" },
+        { "title": "Google Scholar", "href": "https://scholar.google.com/citations?user=C5FY_wwAAAAJ", "icon": "google scholar" },
+        { "title": "ORCID", "href": "https://orcid.org/0000-0001-5817-7464", "icon": "orcid" },
         // { "title": "Mastodon", "href": "https://mastodon.social/@mplabs", "icon": "mastodon" }
+        { "title": "StackOverflow", "href": "https://stackoverflow.com/users/463796/w-m", "icon": "stack overflow" }
     ],
 
     // Images (e.g., your profile picture and your website's favicon)
