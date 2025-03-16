@@ -6,8 +6,10 @@ import avatarImage from '../assets/avatar.png'
 ---
 
 <header class="flex-1 flex flex-col items-center justify-center mx-4 pb-4">
+    <div class="flex justify-center w-full mb-4">
+        <Image class="rounded-full" src={avatarImage} height={250} alt={config.title} />
+    </div>
     <h1 class="mb-4 text-center">
-        <Image class="rounded-full mb-4" src={avatarImage} height={250} alt={config.title} />
         <span class="block text-4xl">{config.title}</span>
     </h1>
     <span class="block text-xl mb-2">{config.position}</span>
