@@ -20,7 +20,7 @@ import avatarImage from '../assets/avatar.png'
             config.links &&
                 config.links.map((link: (typeof config.link)[0]) => (
                     <a class="block me-4 last-of-type:me-0" href={link.href} target="_blank">
-                        <Icon icon={link.icon} class="w-4 h-4" title={link.title} />
+                        <Icon icon={link.icon} class="w-6 h-6" title={link.title} />
                         <span class="sr-only">{link.title}</span>
                     </a>
                 ))
