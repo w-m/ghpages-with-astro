@@ -5,7 +5,7 @@ import { Image } from 'astro:assets'
 import avatarImage from '../assets/avatar.png'
 ---
 
-<header class="flex-1 flex flex-col items-center justify-center mx-4 pb-4">
+<header id="profile-header" class="flex-1 flex flex-col items-center mx-4 pb-4 lg:pt-[15vh]">
     <div class="flex justify-center w-full mb-4">
         <Image class="rounded-full" src={avatarImage} height={250} alt={config.title} />
     </div>
