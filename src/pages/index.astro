@@ -90,7 +90,7 @@ function formatText(text) {
                                     <figure class="relative flex-3">
                                         <Image class="shadow rounded" src={import(`../assets/${pub.image}`)} alt={pub.title} />
                                         {pub.figcaption && <figcaption class="text-xs text-gray-700 w-[95%] mx-auto mt-2">{pub.figcaption}</figcaption>}
-                                        <span class="absolute top-1 left-0 text-xs bg-blue-900 text-white p-1 shadow">{pub.badge}</span>
+                                        <span class="absolute -top-2 -left-2 text-xs bg-blue-900 text-white p-1 shadow">{pub.badge}</span>
                                     </figure>
                                     <div class="flex-6">
                                         <h3 class="text-blue-950 font-bold mb-2"><a href={pub.links[0]?.href || '#'}>{pub.title}</a></h3>
@@ -137,9 +137,9 @@ function formatText(text) {
                                                  alt={talk.title} />
                                         </a>
                                         {talk.type === 'Podcast' ? (
-                                            <span class="absolute top-1 left-0 text-xs bg-red-700 text-white p-1 shadow">{talk.type}</span>
+                                            <span class="absolute -top-2 -left-2 text-xs bg-red-700 text-white p-1 shadow">{talk.type}</span>
                                         ) : (
-                                            <span class="absolute top-1 left-0 text-xs bg-green-700 text-white p-1 shadow">{talk.type}</span>
+                                            <span class="absolute -top-2 -left-2 text-xs bg-green-700 text-white p-1 shadow">{talk.type}</span>
                                         )}
                                     </figure>
                                     <div class="flex-6">
