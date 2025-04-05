@@ -54,16 +54,19 @@ const allNews = await getCollection('news')
                 <!-- News -->
                 <section id="news" class="mb-8 px-4">
                     <h2 class="text-2xl pb-2">News</h2>
-                    <dl class="divide-y divide-gray-700">
+                    <ul class="list-disc ms-4">
                         {allNews.map(({ data: news }) => (
-                            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                                <dt class="text-sm/6 font-medium text-gray-90">{news.date}</dt>
-                                <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                                    {news.href ? (<a href={news.href} target="_blank">{news.title}</a>) : (<Fragment>{news.title}</Fragment>)}
-                                </dd>
-                            </div>
+                            <li class="mb-2">
+                                <span class="font-medium text-gray-900">{news.date}</span> - {" "}
+                                {news.href ? (
+                                    <a href={news.href} target="_blank" 
+                                       set:html={news.title.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                                ) : (
+                                    <Fragment set:html={news.title.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                                )}
+                            </li>
                         ))}
-                    </dl>
+                    </ul>
                 </section>
 
                 <!-- Publications -->
