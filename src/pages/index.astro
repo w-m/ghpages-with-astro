@@ -13,7 +13,14 @@ import teaser2 from '../assets/teaser_example_2-2.png'
 
 const allNews = await getCollection('news')
 const allTalks = await getCollection('talks')
+const allPublications = await getCollection('publications')
 
+// Function to process markdown-style formatting
+function formatText(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+}
 ---
 
 <!doctype html>
@@ -77,61 +84,33 @@ const allTalks = await getCollection('talks')
                     <h2 class="text-2xl pb-2">Projects & Publications</h2>
                     <div class="w-70 h-px bg-gray-300 mb-4"></div>
                     <ul>
-                        <li>
-                            <article class="flex flex-row gap-4 mb-4">
-                                <figure class="relative flex-3">
-                                    <Image class="shadow rounded" src={teaser} alt="Continual Learning for Abdominal Multi-Organ and Tumor Segmentation" />
-                                    <figcaption class="text-xs text-gray-700">Continual Learning for Abdominal Multi-Organ and Tumor Segmentation</figcaption>
-                                    <span class="absolute top-1 left-0 text-xs bg-blue-900 text-white p-1 shadow">MICCAI</span>
-                                </figure>
-                                <div class="flex-6">
-                                    <h3 class="text-blue-950 font-bold mb-2"><a href="assets/pdf/2306.00988v2.pdf">Continual Learning for Abdominal Multi-Organ and Tumor Segmentation</a></h3>
-                                    <span class="authors mb-2">Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)</span>
-                                    <span class="conference italic mb-2">International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.</span>
-                                    <ul class="tags my-4 flex flex-row text-xs">
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="assets/pdf/2306.00988v2.pdf" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">PDF</a>
-                                        </li>
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="https://github.com/MrGiovanni/ContinualLearning" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Code</a>
-                                        </li>
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="https://bib.yliu.me/MICCAI23.txt" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">BibTex</a>
-                                        </li>
-                                        <li class="text-nowrap italic font-bold text-red-600">Early Accept</li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="flex flex-row gap-4 mb-4">
-                                <figure class="relative flex-3">
-                                    <Image class="shadow rounded" src={teaser} alt="Mnemonics Training: Multi-Class Incremental Learning without Forgetting" />
-                                    <figcaption class="text-xs text-gray-700">Mnemonics Training: Multi-Class Incremental Learning without Forgetting</figcaption>
-                                    <span class="absolute top-1 left-0 text-xs bg-blue-900 text-white p-1 shadow">CVPR</span>
-                                </figure>
-                                <div class="flex-6">
-                                    <h3 class="text-blue-950 font-bold mb-2"><a href="assets/pdf/2002.10211v6.pdf">Mnemonics Training: Multi-Class Incremental Learning without Forgetting</a></h3>
-                                    <span class="authors mb-2"><strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun</span>
-                                    <span class="conference italic mb-2">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)<strong>, 2020</strong>.</span>
-                                    <ul class="tags my-4 flex flex-row text-xs">
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="assets/pdf/2002.10211v6.pdf" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">PDF</a>
-                                        </li>
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Code</a>
-                                        </li>
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="https://class-il.mpi-inf.mpg.de/mnemonics/" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Project Page</a>
-                                        </li>
-                                        <li class="text-nowrap p-1 mb-2 me-2">
-                                            <a href="https://class-il.mpi-inf.mpg.de/mnemonics/" class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">BibTex</a>
-                                        </li>
-                                        <li class="text-nowrap italic font-bold text-red-600">Oral Presentation</li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </li>
+                        {allPublications.map(({ data: pub }) => (
+                            <li>
+                                <article class="flex flex-row gap-4 mb-4">
+                                    <figure class="relative flex-3">
+                                        <Image class="shadow rounded" src={import(`../assets/${pub.image}`)} alt={pub.title} />
+                                        <figcaption class="text-xs text-gray-700">{pub.title}</figcaption>
+                                        <span class="absolute top-1 left-0 text-xs bg-blue-900 text-white p-1 shadow">{pub.badge}</span>
+                                    </figure>
+                                    <div class="flex-6">
+                                        <h3 class="text-blue-950 font-bold mb-2"><a href={pub.links[0]?.href || '#'}>{pub.title}</a></h3>
+                                        <span class="authors mb-2 block" set:html={formatText(pub.authors)} />
+                                        <span class="conference italic mb-2 block" set:html={formatText(pub.venue)} />
+                                        <p class="mb-3" set:html={formatText(pub.description)} />
+                                        <ul class="tags my-4 flex flex-row text-xs">
+                                            {pub.links.map(link => (
+                                                <li class="text-nowrap p-1 mb-2 me-2">
+                                                    <a href={link.href} class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">{link.title}</a>
+                                                </li>
+                                            ))}
+                                            {pub.special && (
+                                                <li class="text-nowrap italic font-bold text-red-600">{pub.special}</li>
+                                            )}
+                                        </ul>
+                                    </div>
+                                </article>
+                            </li>
+                        ))}
                     </ul>
                 </section>
 

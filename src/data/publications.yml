@@ -1,0 +1,35 @@
+- date: 2023
+  slug: continual-learning
+  title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
+  authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, **Yaoyao Liu***, Zongwei Zhou* (*Corresponding authors)
+  venue: International Conference on Medical Image Computing and Computer-Assisted Intervention **(MICCAI)**, 2023
+  description: This paper introduces a novel approach to continual learning for medical image segmentation, allowing models to learn new tasks without forgetting previous ones.
+  image: teaser_example-2.png
+  badge: MICCAI
+  special: Early Accept
+  links:
+    - title: PDF
+      href: assets/pdf/2306.00988v2.pdf
+    - title: Code
+      href: https://github.com/MrGiovanni/ContinualLearning
+    - title: BibTex
+      href: https://bib.yliu.me/MICCAI23.txt
+
+- date: 2020
+  slug: mnemonics-training
+  title: Mnemonics Training - Multi-Class Incremental Learning without Forgetting
+  authors: "**Yaoyao Liu**, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun"
+  venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition **(CVPR)**, 2020
+  description: This work presents a novel incremental learning approach that maintains exemplars in the feature space rather than pixel space, enabling more efficient use of memory for learning new tasks.
+  image: teaser_example-2.png
+  badge: CVPR
+  special: Oral Presentation
+  links:
+    - title: PDF
+      href: assets/pdf/2002.10211v6.pdf
+    - title: Code
+      href: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    - title: Project Page
+      href: https://class-il.mpi-inf.mpg.de/mnemonics/
+    - title: BibTex
+      href: https://class-il.mpi-inf.mpg.de/mnemonics/

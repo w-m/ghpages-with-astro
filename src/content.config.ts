@@ -23,4 +23,23 @@ const talks = defineCollection({
     }),
 })
 
-export const collections = { news, talks }
+const publications = defineCollection({
+    loader: file('src/data/publications.yml'),
+    schema: z.object({
+        date: z.number() || z.string(),
+        slug: z.string(),
+        title: z.string(),
+        authors: z.string(),
+        venue: z.string(),
+        description: z.string(),
+        image: z.string(),
+        badge: z.string(),
+        special: z.string().optional(),
+        links: z.array(z.object({
+            title: z.string(),
+            href: z.string()
+        }))
+    }),
+})
+
+export const collections = { news, talks, publications }
