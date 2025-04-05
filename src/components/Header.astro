@@ -12,9 +12,16 @@ import avatarImage from '../assets/avatar.png'
     <h1 class="mb-4 text-center">
         <span class="block text-4xl">{config.title}</span>
     </h1>
-    <span class="block text-xl mb-2">{config.position}</span>
-    <span class="block text-xl mb-2">{config.affiliation}</span>
-    <a class="mb-2" href={`mailto:${config.email}`}>{config.email}</a>
+    
+    <!-- Combined position and affiliation with better formatting -->
+    <div class="text-center mb-3">
+        <span class="block text-xl">{config.position}</span>
+        <span class="block text-xl">at <a href={config.affiliation_url} target="_blank">{config.affiliation}</a></span>
+    </div>
+        
+    <!-- Horizontal line before icons -->
+    <div class="w-70 h-px bg-gray-300 my-4"></div>
+    
     <div class="flex">
         {
             config.links &&
@@ -26,4 +33,8 @@ import avatarImage from '../assets/avatar.png'
                 ))
         }
     </div>
+    <div class="w-70 h-px bg-gray-300 my-4"></div>
+    <a class="mb-2" href={`mailto:${config.email}`}>{config.email}</a>
+
+
 </header>
