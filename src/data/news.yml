@@ -1,16 +1,29 @@
-- date: Feb. 2025
-  slug: cvpr-2025
-  title: Our paper about incremental learning is accepted to CVPR 2025.
-  href: https://cvpr.thecvf.com/Conferences/2025
-- date: Feb. 2025
-  slug: acm-2025
-  title: We will host the ACM Multimedia Asia 2025 conference in Singapore!
-  href: https://www.acmmmasia.org
-- date: Sept. 2024
-  slug: neurips-2024
-  title: Our paper about few-shot learning is accepted to NeurIPS 2024.
-  href: https://neurips.cc/Conferences/2024
-- date: Mar. 2024
-  slug: cvpr-2024
-  title:  Our paper about few-shot learning is accepted to CVPR 2024.
-  href: https://cvpr.thecvf.com/Conferences/2024
+- date: Mar. 2025
+  slug: eurographics-2025
+  title: The 3DGS.zip compression survey paper has been accepted as a STAR and will be presented at Eurographics 2025.
+  href: https://w-m.github.io/3dgs-compression-survey/
+
+- date: "Feb. 2025"
+  slug: "sutro-tower-online"
+  title: "The incredible 3D browser experience of Sutro Tower in San Francisco goes online, created by Vincent Woo using our Self-Organizing Gaussians compression method and SuperSplat."
+  href: "http://vincentwoo.com/3d/sutro_tower/"
+
+- date: "Oct. 2024"
+  slug: "eccv-2024"
+  title: "Our paper about Compact 3D Scene Representation via Self-Organizing Gaussian Grids is accepted to ECCV 2024."
+  href: "https://fraunhoferhhi.github.io/Self-Organizing-Gaussians/"
+
+- date: Jun. 2024
+  slug: 3dgs-zip
+  title: Our interactive survey on 3D Gaussian Splatting compression goes online at 3DGS.zip.
+  href: https://w-m.github.io/3dgs-compression-survey/
+
+- date: "Mar. 2024"
+  slug: "ieee-vr-2024"
+  title: "We presented our paper Animatable Virtual Humans: Learning pose-dependent human representations in UV space for interactive performance synthesis at IEEE VR 2024."
+  href: "https://ieeexplore.ieee.org/document/10466725"
+
+- date: "Jun. 2023"
+  slug: "cvpr-eventvision-2023"
+  title: "Our paper X-maps: Direct Depth Lookup for Event-based Structured Light Systems is accepted to the CVPR 2023 Workshop on Event-based Vision."
+  href: "https://fraunhoferhhi.github.io/X-maps/"
