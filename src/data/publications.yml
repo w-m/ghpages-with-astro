@@ -72,28 +72,6 @@
 #     - title: Website
 #       href: http://stacksnippet.com/
 
-# - date: 2015
-#   slug: pleonasm
-#   title: ple·o·nasm
-#   authors: "**Wieland Morgenstern**"
-#   venue: Personal Project
-#   description: Create English phrases from hex numbers that are easier to recognize and remember.
-#   image: pleonasm.png
-#   badge: Tool
-#   tags:
-#     - Python
-#     - NLP
-#     - Word frequency
-#     - Google Ngram
-#     - JavaScript
-#   links:
-#     - title: Homepage
-#       href: http://w-m.github.io/pleonasm/
-#     - title: GitHub
-#       href: https://github.com/w-m/pleonasm
-#     - title: NPM
-#       href: https://npmjs.org/package/pleonasm
-
 - date: 2014
   slug: movie-tint
   title: Movie Tint
@@ -106,6 +84,28 @@
   links:
     - title: Website
       href: http://movietint.tumblr.com
+
+- date: 2013
+  slug: pleonasm
+  title: ple·o·nasm
+  authors: ""
+  venue: Personal Project
+  description: Create English phrases from hex numbers that are easier to recognize and remember.
+  image: pleonasm.png
+  badge: Tool
+  tags:
+    - Python
+    - NLP
+    - Word frequency
+    - Google Ngram
+    - JavaScript
+  links:
+    - title: Homepage
+      href: http://w-m.github.io/pleonasm/
+    - title: GitHub
+      href: https://github.com/w-m/pleonasm
+    - title: NPM
+      href: https://npmjs.org/package/pleonasm
 
 # - date: 2013
 #   slug: generic-collection
@@ -125,24 +125,25 @@
 #     - title: GitHub
 #       href: https://github.com/w-m/WMGenericCollection
 
-# - date: 2012
-#   slug: clhog
-#   title: clHOG
-#   authors: "**Wieland Morgenstern**"
-#   venue: Bachelor's Thesis
-#   description: For my bachelor's thesis, I implemented the Histograms of Oriented Gradients algorithm highly parallel for GPUs, with OpenCL. To speed up the calculations, I developed a new algorithm for the block computation and as a result surpassed several other implementation.
-#   image: clhog.png
-#   badge: Thesis
-#   tags:
-#     - Computer Vision
-#     - Image Processing
-#     - Algorithms
-#     - Parallelism
-#     - OpenCL
-#     - C++
-#   links:
-#     - title: University
-#       href: http://www.tu-ilmenau.de/
+- date: 2012
+  slug: clhog
+  title: clHOG
+  authors: ""
+  venue: Bachelor's Thesis
+  description: For my bachelor's thesis, I implemented the Histograms of Oriented Gradients algorithm highly parallel for GPUs, with OpenCL. To speed up the calculations, I developed a new algorithm for the block computation and as a result surpassed several other implementation.
+  image: clhog.png
+  # figcaption: Visualization of the clHOG algorithm implementation
+  badge: Thesis
+  tags:
+    - Computer Vision
+    - Image Processing
+    - Algorithms
+    - Parallelism
+    - OpenCL
+    - C++
+  links:
+    - title: University
+      href: http://www.tu-ilmenau.de/
 
 # - date: 2011
 #   slug: visual-odometry

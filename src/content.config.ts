@@ -34,7 +34,7 @@ const publications = defineCollection({
         description: z.string(),
         image: z.string(),
         badge: z.string(),
-        figcaption: z.string(),
+        figcaption: z.string().optional(),
         special: z.string().optional(),
         tags: z.array(z.string()).optional(),
         links: z.array(z.object({
