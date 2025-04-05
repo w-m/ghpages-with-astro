@@ -1,35 +1,157 @@
-- date: 2023
-  slug: continual-learning
-  title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-  authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, **Yaoyao Liu***, Zongwei Zhou* (*Corresponding authors)
-  venue: International Conference on Medical Image Computing and Computer-Assisted Intervention **(MICCAI)**, 2023
-  description: This paper introduces a novel approach to continual learning for medical image segmentation, allowing models to learn new tasks without forgetting previous ones.
-  image: teaser_example-2.png
-  badge: MICCAI
-  special: Early Accept
-  links:
-    - title: PDF
-      href: assets/pdf/2306.00988v2.pdf
-    - title: Code
-      href: https://github.com/MrGiovanni/ContinualLearning
-    - title: BibTex
-      href: https://bib.yliu.me/MICCAI23.txt
+# - date: 2023
+#   slug: continual-learning
+#   title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
+#   authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, **Yaoyao Liu***, Zongwei Zhou* (*Corresponding authors)
+#   venue: International Conference on Medical Image Computing and Computer-Assisted Intervention **(MICCAI)**, 2023
+#   description: This paper introduces a novel approach to continual learning for medical image segmentation, allowing models to learn new tasks without forgetting previous ones.
+#   image: teaser_example-2.png
+#   badge: MICCAI
+#   special: Early Accept
+#   links:
+#     - title: PDF
+#       href: assets/pdf/2306.00988v2.pdf
+#     - title: Code
+#       href: https://github.com/MrGiovanni/ContinualLearning
+#     - title: BibTex
+#       href: https://bib.yliu.me/MICCAI23.txt
 
-- date: 2020
-  slug: mnemonics-training
-  title: Mnemonics Training - Multi-Class Incremental Learning without Forgetting
-  authors: "**Yaoyao Liu**, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun"
-  venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition **(CVPR)**, 2020
-  description: This work presents a novel incremental learning approach that maintains exemplars in the feature space rather than pixel space, enabling more efficient use of memory for learning new tasks.
-  image: teaser_example-2.png
-  badge: CVPR
-  special: Oral Presentation
+# - date: 2020
+#   slug: mnemonics-training
+#   title: Mnemonics Training - Multi-Class Incremental Learning without Forgetting
+#   authors: "**Yaoyao Liu**, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun"
+#   venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition **(CVPR)**, 2020
+#   description: This work presents a novel incremental learning approach that maintains exemplars in the feature space rather than pixel space, enabling more efficient use of memory for learning new tasks.
+#   image: teaser_example-2.png
+#   badge: CVPR
+#   special: Oral Presentation
+#   links:
+#     - title: PDF
+#       href: assets/pdf/2002.10211v6.pdf
+#     - title: Code
+#       href: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+#     - title: Project Page
+#       href: https://class-il.mpi-inf.mpg.de/mnemonics/
+#     - title: BibTex
+#       href: https://class-il.mpi-inf.mpg.de/mnemonics/
+
+# # Projects from old website
+# - date: 2017
+#   slug: primate-face-detection
+#   title: Using Keyframe Selection to Improve Detection of Primate Faces in Videos
+#   authors: "**Wieland Morgenstern**"
+#   venue: Master's Thesis
+#   description: Poses of primates in video frames and their image quality are determined through image processing and machine learning. Frames with the highest quality and best pose are selected for further processing. Recognition of individuals was vastly improved. I worked on this topic for my master's thesis to improve the detection rate of the **SAISBECO** project - Semi-Automated Audiovisual Species and Individual Identification System for Behavioral Ecological Research and Conservation.
+#   # image: template_2_TopCenter.png
+#   image: 
+#   badge: Thesis
+#   tags:
+#     - Head pose estimation
+#     - Image quality estimation
+#     - Machine learning
+#     - MATLAB
+#     - C++
+#     - Python
+#   links:
+#     - title: Abstract (PDF)
+#       href: download/Abstract_Master_Thesis_Wieland_Morgenstern.pdf
+
+# - date: 2016
+#   slug: stacksnippet
+#   title: stack**snippet**
+#   authors: "**Wieland Morgenstern**"
+#   venue: Personal Project
+#   description: A search engine for code snippets on Stack Overflow, built with AngularJS. stacksnippet aims to combine the preciseness of Google Search with Stack Overflow's vast reservoir of helpful code snippets -- all clutter removed. It gives a quick overview over code snippets for a search term, with the full answers at your fingertips.
+#   image: stacksnippet.png
+#   badge: Web
+#   tags:
+#     - AngularJS
+#     - JavaScript
+#     - StackExchange API
+#     - CSS
+#   links:
+#     - title: Website
+#       href: http://stacksnippet.com/
+
+# - date: 2015
+#   slug: pleonasm
+#   title: ple·o·nasm
+#   authors: "**Wieland Morgenstern**"
+#   venue: Personal Project
+#   description: Create English phrases from hex numbers that are easier to recognize and remember.
+#   image: pleonasm.png
+#   badge: Tool
+#   tags:
+#     - Python
+#     - NLP
+#     - Word frequency
+#     - Google Ngram
+#     - JavaScript
+#   links:
+#     - title: Homepage
+#       href: http://w-m.github.io/pleonasm/
+#     - title: GitHub
+#       href: https://github.com/w-m/pleonasm
+#     - title: NPM
+#       href: https://npmjs.org/package/pleonasm
+
+- date: 2014
+  slug: movie-tint
+  title: Movie Tint
+  authors: ""
+  venue: Personal Project
+  description: Exploring the colors of moving pictures. I'm fascinated with colors in moving pictures, and started this project to visualize the colors and their change over time in films. It's quite hard to boil down all the information just one movie contains into a single image, but fun to play around with different and unique plots.
+  figcaption: Gladiator (2000) - Prologue / before Africa, 47 min. 29 sec.
+  image: movie_tint.jpeg
+  badge: Visual
   links:
-    - title: PDF
-      href: assets/pdf/2002.10211v6.pdf
-    - title: Code
-      href: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    - title: Project Page
-      href: https://class-il.mpi-inf.mpg.de/mnemonics/
-    - title: BibTex
-      href: https://class-il.mpi-inf.mpg.de/mnemonics/
+    - title: Website
+      href: http://movietint.tumblr.com
+
+# - date: 2013
+#   slug: generic-collection
+#   title: WMGenericCollection
+#   authors: "**Wieland Morgenstern**"
+#   venue: Open Source Library
+#   description: Objective-C Generics - checking type correctness at compile time for NSArray, NSDictionary and NSSet. The language Objective-C doesn't provide generics. Heavily disputed whether they are needed in Objective-C, yet often used in comparable languages. WMGenericCollection provides generics for Objective-C through custom collection subclasses, which can be created with C Macros.
+#   image: xcode.png
+#   badge: Library
+#   tags:
+#     - Objective-C
+#     - Python
+#     - Templates
+#     - Preprocessor
+#     - RegEx
+#   links:
+#     - title: GitHub
+#       href: https://github.com/w-m/WMGenericCollection
+
+# - date: 2012
+#   slug: clhog
+#   title: clHOG
+#   authors: "**Wieland Morgenstern**"
+#   venue: Bachelor's Thesis
+#   description: For my bachelor's thesis, I implemented the Histograms of Oriented Gradients algorithm highly parallel for GPUs, with OpenCL. To speed up the calculations, I developed a new algorithm for the block computation and as a result surpassed several other implementation.
+#   image: clhog.png
+#   badge: Thesis
+#   tags:
+#     - Computer Vision
+#     - Image Processing
+#     - Algorithms
+#     - Parallelism
+#     - OpenCL
+#     - C++
+#   links:
+#     - title: University
+#       href: http://www.tu-ilmenau.de/
+
+# - date: 2011
+#   slug: visual-odometry
+#   title: Visual Odometry
+#   authors: "**Wieland Morgenstern**"
+#   venue: Advanced Seminar, TU Ilmenau
+#   description: For an advanced seminar, I researched information on visual odometry. I was asked to rework my results into a set of slides, which were later used in the robot vision lecture at TU Ilmenau.
+#   image: tu_ilmenau.png
+#   badge: Research
+#   links:
+#     - title: University
+#       href: http://www.tu-ilmenau.de/

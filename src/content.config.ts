@@ -26,7 +26,7 @@ const talks = defineCollection({
 const publications = defineCollection({
     loader: file('src/data/publications.yml'),
     schema: z.object({
-        date: z.number() || z.string(),
+        date: z.union([z.number(), z.string()]),
         slug: z.string(),
         title: z.string(),
         authors: z.string(),
@@ -34,7 +34,9 @@ const publications = defineCollection({
         description: z.string(),
         image: z.string(),
         badge: z.string(),
+        figcaption: z.string(),
         special: z.string().optional(),
+        tags: z.array(z.string()).optional(),
         links: z.array(z.object({
             title: z.string(),
             href: z.string()
