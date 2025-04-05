@@ -11,4 +11,16 @@ const news = defineCollection({
     }),
 })
 
-export const collections = { news }
+const talks = defineCollection({
+    loader: file('src/data/talks.yml'),
+    schema: z.object({
+        date: z.string(),
+        slug: z.string(),
+        title: z.string(),
+        description: z.string(),
+        videoId: z.string(),
+        type: z.string(),
+    }),
+})
+
+export const collections = { news, talks }

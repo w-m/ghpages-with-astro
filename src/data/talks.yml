@@ -1,0 +1,13 @@
+- date: Mar. 2025
+  slug: view-dependent-podcast
+  title: View Dependent Podcast - 3DGS Compression Discussion
+  description: An hour-long conversation with <a href="https://radiancefields.com">Michael Rubloff</a> and <a href="https://x.com/janusch_patas">MrNeRF</a> in the View Dependent Podcast about 3DGS compression, why the Gaussians are Self-Organizing, and how this project came to be.
+  videoId: Y0O6R0Keywg
+  type: Podcast
+
+- date: Feb. 2025
+  slug: eccv-redux
+  title: Self-Organizing Gaussians - ECCV 2024 Redux Series
+  description: A 30-minute talk about Self-Organizing Gaussians given at the <a href="https://voxel51.com/resources/lp/eccv-redux-series/">ECCV 2024 Redux Series</a> at Voxel51.
+  videoId: nb5U9xfx7-w
+  type: Talk

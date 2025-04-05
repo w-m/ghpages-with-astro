@@ -12,6 +12,7 @@ import teaser from '../assets/teaser_example-2.png'
 import teaser2 from '../assets/teaser_example_2-2.png'
 
 const allNews = await getCollection('news')
+const allTalks = await getCollection('talks')
 
 ---
 
@@ -128,6 +129,42 @@ const allNews = await getCollection('news')
                                 </div>
                             </article>
                         </li>
+                    </ul>
+                </section>
+
+                <!-- Talks -->
+                <section id="talks" class="mb-8 px-4">
+                    <h2 class="text-2xl pb-2">Talks</h2>
+                    <ul>
+                        {allTalks.map(({ data: talk }) => (
+                            <li>
+                                <article class="flex flex-row gap-4 mb-4">
+                                    <figure class="relative flex-3">
+                                        <a href={`https://www.youtube.com/watch?v=${talk.videoId}`} target="_blank">
+                                            <img class="shadow rounded" 
+                                                 src={`https://i.ytimg.com/vi/${talk.videoId}/hqdefault.jpg`} 
+                                                 alt={talk.title} />
+                                        </a>
+                                        {talk.type === 'Podcast' ? (
+                                            <span class="absolute top-1 left-0 text-xs bg-red-700 text-white p-1 shadow">{talk.type}</span>
+                                        ) : (
+                                            <span class="absolute top-1 left-0 text-xs bg-green-700 text-white p-1 shadow">{talk.type}</span>
+                                        )}
+                                    </figure>
+                                    <div class="flex-6">
+                                        <h3 class="text-blue-950 font-bold mb-2">
+                                            <a href={`https://www.youtube.com/watch?v=${talk.videoId}`} target="_blank">{talk.title}</a>
+                                        </h3>
+                                        <p class="mb-2" set:html={talk.description} />
+                                        <ul class="tags my-4 flex flex-row text-xs">
+                                            <li class="text-nowrap p-1 mb-2 me-2">
+                                                <a href={`https://www.youtube.com/watch?v=${talk.videoId}`} class="border p-1 rounded bg-white hover:bg-blue-100 shadow hover:shadow-lg" target="_blank">Watch on YouTube</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </li>
+                        ))}
                     </ul>
                 </section>
 
