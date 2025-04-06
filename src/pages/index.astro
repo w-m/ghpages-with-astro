@@ -86,7 +86,7 @@ function formatText(text) {
                     <ul>
                         {allPublications.map(({ data: pub }) => (
                             <li>
-                                <article class="flex flex-row gap-4 mb-4">
+                                <article class="flex flex-row gap-4 mb-12">
                                     <figure class="relative flex-3">
                                         <Image class="shadow rounded" src={import(`../assets/${pub.image}`)} alt={pub.title} />
                                         {pub.figcaption && <figcaption class="text-xs text-gray-700 w-[95%] mx-auto mt-2">{pub.figcaption}</figcaption>}
@@ -129,7 +129,7 @@ function formatText(text) {
                     <ul>
                         {allTalks.map(({ data: talk }) => (
                             <li>
-                                <article class="flex flex-row gap-4 mb-4">
+                                <article class="flex flex-row gap-4 mb-12">
                                     <figure class="relative flex-3">
                                         <a href={`https://www.youtube.com/watch?v=${talk.videoId}`} target="_blank">
                                             <img class="shadow rounded w-full aspect-video object-cover" 
