@@ -72,6 +72,115 @@
 #     - title: Website
 #       href: http://stacksnippet.com/
 
+
+- date: 2024-2025
+  slug: 3dgs-compression-survey
+  title: "3DGS.zip: A survey on 3D Gaussian Splatting Compression Methods"
+  authors: "Milena Bagdasarian, Paul Knoll, Yi-Hsin Li, Florian Barthel, Anna Hilsmann, Peter Eisert, **Wieland Morgenstern**"
+  venue: Eurographics 2025 STAR
+  description: "We present a work-in-progress survey on 3D Gaussian Splatting compression methods, focusing on their statistical performance across various benchmarks. This survey aims to facilitate comparability by summarising key statistics of different compression approaches in a tabulated format. The datasets evaluated include Tanks and Temples, Mip-NeRF 360, Deep Blending, and Synthetic NeRF. For each method, we report the Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index (SSIM), Learned Perceptual Image Patch Similarity (LPIPS), and the resultant size in megabytes (MB, 10^6 bytes), as provided by the respective authors. This is an ongoing, open project, and we invite contributions from the research community as GitHub issues or pull requests."
+  image: survey-teaser.png
+  badge: Eurographics
+  tags:
+    - 3D Gaussian Splatting
+    - Compression
+    - Survey
+    - Neural Rendering
+  links:
+    - title: Project Page
+      href: https://w-m.github.io/3dgs-compression-survey/
+    - title: GitHub
+      href: https://github.com/w-m/3dgs-compression-survey
+
+- date: 2024
+  slug: self-organizing-gaussians
+  title: "Compact 3D Scene Representation via Self-Organizing Gaussian Grids"
+  authors: "**Wieland Morgenstern**, Florian Barthel, Anna Hilsmann, Peter Eisert"
+  venue: European Conference on Computer Vision **(ECCV)**, 2024
+  description: "We propose a novel compact scene representation for 3D Gaussian Splatting by organizing parameters into a 2D grid and enforcing local smoothness during training. This approach leverages off-the-shelf image compression to efficiently store attribute images, reducing storage size by 19.9x to 39.5x while maintaining high visual quality. Our method includes an efficient GPU-based sorting algorithm and provides a simple interface for compressing and decompressing 3D scenes."
+  image: sog-teaser.png
+  badge: ECCV
+  tags:
+    - 3D Gaussian Splatting
+    - Compression
+    - Neural Rendering
+    - 3D Reconstruction
+  links:
+    - title: Paper
+      href: https://arxiv.org/pdf/2312.13299.pdf
+    - title: Code
+      href: https://github.com/fraunhoferhhi/Self-Organizing-Gaussians
+    - title: Poster
+      href: static/pdfs/Poster Self-Organizing Gaussians (ECCV).pdf
+
+- date: 2024
+  slug: animatable-virtual-humans
+  title: "Animatable Virtual Humans: Learning pose-dependent human representations in UV space for interactive performance synthesis"
+  authors: "**Wieland Morgenstern**, Milena T. Bagdasarian, Anna Hilsmann, Peter Eisert"
+  venue: IEEE Conference on Virtual Reality and 3D User Interfaces **(IEEE VR)**, 2024
+  description: "We propose a novel representation of virtual humans for highly realistic real-time animation and rendering in 3D applications. We learn pose-dependent appearance and geometry from accurate dynamic mesh sequences obtained from multiview-video reconstruction. By leveraging SMPL body models as a-priori knowledge, we learn the difference between observed geometry and the fitted SMPL model, encoding both pose-dependent appearance and geometry in the consistent UV space of the SMPL model. This approach ensures high realism while facilitating streamlined animation and rendering."
+  image: avh-teaser.png 
+  badge: IEEE VR
+  tags:
+    - Virtual Humans
+    - Animation
+    - Performance Synthesis
+    - SMPL
+    - 3D Reconstruction
+  links:
+    - title: Paper
+      href: https://dl.acm.org/doi/10.1109/TVCG.2024.3372117
+    - title: arXiv
+      href: https://arxiv.org/abs/2310.03615
+
+- date: 2023
+  slug: x-maps
+  title: "X-maps: Direct Depth Lookup for Event-based Structured Light Systems"
+  authors: "**Wieland Morgenstern**, Niklas Gard, Simon Baumann, Anna Hilsmann, Peter Eisert"
+  venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops **(CVPRW)**, 2023
+  description: "We present a new approach to direct depth estimation for Spatial Augmented Reality applications using event cameras paired with laser projectors. Our key contribution involves converting projector time maps into rectified X-maps that capture x-axis correspondences for incoming events, enabling direct disparity lookup without additional search. This significantly simplifies depth estimation, making it more efficient while maintaining accuracy. Our method compensates for non-linear temporal behavior of laser projectors through time map calibration, resulting in improved performance. With depth estimation executed by just two lookups in under 3ms per frame, our approach enables real-time interactivity ideal for augmented reality experiences where low latency is crucial."
+  image: x-maps-teaser.png
+  badge: CVPRW
+  tags:
+    - Event Cameras
+    - Depth Estimation
+    - Structured Light
+    - Augmented Reality
+    - Real-time
+  links:
+    - title: Project Page
+      href: https://fraunhoferhhi.github.io/X-maps/
+    - title: Paper (OpenAccess)
+      href: https://openaccess.thecvf.com/content/CVPR2023W/EventVision/papers/Morgenstern_X-Maps_Direct_Depth_Lookup_for_Event-Based_Structured_Light_Systems_CVPRW_2023_paper.pdf
+    - title: arXiv
+      href: http://arxiv.org/abs/2402.10061
+    - title: IEEE
+      href: https://ieeexplore.ieee.org/document/10208598
+    - title: Poster
+      href: https://tub-rip.github.io/eventvision2023/papers/2023CVPRW_X-Maps_Direct_Depth_Lookup_for_Event-based_Structured_Light_Systems_poster.pdf
+    - title: Code
+      href: https://github.com/fraunhoferhhi/X-maps
+
+- date: 2019
+  slug: progressive-non-rigid-registration
+  title: "Progressive Non-rigid Registration of Temporal Mesh Sequences"
+  authors: "**Wieland Morgenstern**, Anna Hilsmann, Peter Eisert"
+  venue: ACM SIGGRAPH European Conference on Visual Media Production **(CVMP)**, 2019
+  description: "We present an algorithm for progressive mesh registration to provide temporal consistency, simplify temporal texture editing and optimize the data rate of 3D mesh sequences recorded in a volumetric capture studio. Our approach splits sequences into groups of frames that share connectivity, using keyframes that are progressively deformed to approximate adjacent meshes. The algorithm employs a coarse-to-fine ICP approach that is robust against large deformations while preserving small details. A deformation graph constrains transformations to be locally as-rigid-as-possible, allowing work with any natural objects. Our method robustly tracks human actors with varying clothing over hundreds of frames, taking less than five seconds per frame on a single desktop machine."
+  image: progressive-non-rigid-registration-teaser.png
+  badge: CVMP
+  special: Best Paper Award
+  tags:
+    - Mesh Registration
+    - Non-rigid Registration
+    - 3D Reconstruction
+    - Volumetric Capture
+  links:
+    - title: Paper
+      href: https://dl.acm.org/doi/abs/10.1145/3359998.3369411
+    - title: DOI
+      href: https://doi.org/10.1145/3359998.3369411
+
 - date: 2014
   slug: movie-tint
   title: Movie Tint
