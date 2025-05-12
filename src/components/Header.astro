@@ -7,7 +7,15 @@ import avatarImage from '../assets/img/avatar.png'
 
 <header id="profile-header" class="flex-1 flex flex-col items-center mx-4 pb-4 lg:pt-[15vh]">
     <div class="flex justify-center w-full mb-4">
-        <Image class="rounded-full" src={avatarImage} height={250} alt={config.title} loading="eager" />
+        <Image
+            class="rounded-full"
+            src={avatarImage}
+            width={187}
+            height={250}
+            alt={config.title}
+            loading="eager"
+            fetchpriority="high"
+        />
     </div>
     <h1 class="mb-4 text-center">
         <span class="block text-4xl">{config.title}</span>
