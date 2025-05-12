@@ -9,9 +9,9 @@
     // Search Engine Optimization (SEO)
     // The following information is used to improve the website traffic from search engines, e.g., Google.
     "author": "Wieland Morgenstern",
-    "keywords": "minimal light",
-    "description": "A minimal and light academic personal website template built with Astro.",
-    "canonical": "https://ghpages-with-astro.mplabs.cloud/",
+    "keywords": "computer vision, graphics, research, Fraunhofer HHI, Wieland Morgenstern",
+    "description": "Personal website of Wieland Morgenstern, a computer vision researcher at Fraunhofer HHI.",
+    "canonical": "https://wieland.morgenst.de/",
 
     // Links
     // If you don't need one of them, you may delete the corresponding line.
