@@ -1,0 +1,29 @@
+# -------------------------------------------------------------------
+# Enable Gzip compression (mod_deflate) on shared Apache hosting.
+# Simplified variant confirmed to work in Variomedia webspace.
+# -------------------------------------------------------------------
+
+# Only run if the module is available (it is, by default, at Variomedia)
+<IfModule mod_deflate.c>
+
+    # Compress text, HTML, JavaScript, CSS, XML, JSON, SVG
+    AddOutputFilterByType DEFLATE \
+        text/plain \
+        text/html \
+        text/xml \
+        text/css \
+        text/javascript \
+        application/javascript \
+        application/x-javascript \
+        application/json \
+        application/xml \
+        image/svg+xml
+
+    # Do not compress already-compressed files (images, archives, fonts …)
+    <FilesMatch "\.(?:gif|jpe?g|png|webp|avif|ico|mp4|mov|webm|ogg|mp3|zip|gz|rar|bz2|7z|ttf|otf|eot|woff2?)$">
+        SetEnv no-gzip 1
+    </FilesMatch>
+
+</IfModule>
+
+# End of file --------------------------------------------------------
