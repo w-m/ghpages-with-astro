@@ -2,7 +2,7 @@
 import BaseHead from '@components/BaseHead.astro'
 import Header from '@components/Header.astro'
 import { getCollection } from 'astro:content'
-import { Image } from 'astro:assets'
+// import { Image } from 'astro:assets' // Removed unused dynamic image import
 import config from '@config'
 
 import '@styles/global.css'
@@ -21,6 +21,8 @@ function formatText(text) {
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
 }
+// Import all images as URLs for publications
+const imageModules = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { eager: true, as: 'url' });
 ---
 
 <!doctype html>
@@ -88,7 +90,7 @@ function formatText(text) {
                             <li>
                                 <article class="flex flex-row gap-4 mb-12">
                                     <figure class="relative flex-3">
-                                        <Image class="shadow rounded" src={import(`../assets/${pub.image}`)} alt={pub.title} />
+                                        <img class="shadow rounded" src={imageModules[`../assets/${pub.image}`]} alt={pub.title} />
                                         {pub.figcaption && <figcaption class="text-xs text-gray-700 w-[95%] mx-auto mt-2">{pub.figcaption}</figcaption>}
                                         <span class="absolute -top-2 -left-2 text-xs bg-blue-900 text-white p-1 shadow">{pub.badge}</span>
                                     </figure>
