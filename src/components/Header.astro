@@ -24,7 +24,7 @@ import avatarImage from '../assets/img/avatar.png'
     <!-- Combined position and affiliation with better formatting -->
     <div class="text-center mb-3">
         <span class="block text-xl">{config.position}</span>
-        <span class="block text-xl">at <a href={config.affiliation_url} target="_blank">{config.affiliation}</a></span>
+        <span class="block text-xl">at <a href={config.affiliation_url} target="_blank" rel="noopener noreferrer">{config.affiliation}</a></span>
     </div>
         
     <!-- Horizontal line before icons -->
@@ -38,7 +38,7 @@ import avatarImage from '../assets/img/avatar.png'
                     <a
                         class="flex items-center me-4 last-of-type:me-0 lg:me-0 lg:mb-2"
                         href={link.href}
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                     >
                         <Icon icon={link.icon} class="w-6 h-6 shrink-0" title={link.title} />
                         <span class="sr-only">{link.title}</span>
