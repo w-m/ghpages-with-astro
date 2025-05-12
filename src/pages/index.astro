@@ -92,12 +92,14 @@ const getImageData = (fileName) => imageModules[`../assets/img/${fileName}`]?.de
                         {allPublications.map(({ data: pub }) => (
                             <li>
                                 <article class="flex flex-col md:flex-row gap-4 mb-12">
-                                    <figure class="relative md:flex-3 w-full">
-                                        <Image 
-                                            class="shadow rounded w-full object-cover" 
-                                            src={getImageData(pub.image)} 
-                                            alt={pub.title} 
-                                            width={400} />
+                                    <figure class="relative md:flex-3 w-full md:max-w-[400px]">
+                                        <Image
+                                            class="shadow rounded w-full object-cover"
+                                            src={getImageData(pub.image)}
+                                            alt={pub.title}
+                                            widths={[320, 400]}
+                                            sizes="(max-width: 768px) 100vw, 400px"
+                                        />
                                         {pub.figcaption && (
                                             <figcaption class="text-xs text-gray-700 w-[95%] mx-auto mt-2">{pub.figcaption}</figcaption>
                                         )}
