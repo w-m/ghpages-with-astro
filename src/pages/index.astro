@@ -145,9 +145,16 @@ const getImageData = (fileName) => imageModules[`../assets/img/${fileName}`]?.de
                                 <article class="flex flex-row gap-4 mb-12">
                                     <figure class="relative flex-3">
                                         <a href={`https://www.youtube.com/watch?v=${talk.videoId}`} target="_blank">
-                                            <img class="shadow rounded w-full aspect-video object-cover" 
-                                                 src={`https://i.ytimg.com/vi/${talk.videoId}/hqdefault.jpg`} 
-                                                 alt={talk.title} />
+                                            <img
+                                                class="shadow rounded w-full aspect-video object-cover"
+                                                src={`https://i.ytimg.com/vi/${talk.videoId}/hqdefault.jpg`}
+                                                alt={talk.title}
+                                                width="480"
+                                                height="360"
+                                                loading="lazy"
+                                                decoding="async"
+                                                sizes="(max-width: 768px) 100vw, 400px"
+                                            />
                                         </a>
                                         {talk.type === 'Podcast' ? (
                                             <span class="absolute -top-2 -left-2 text-xs bg-red-700 text-white p-1 shadow">{talk.type}</span>
