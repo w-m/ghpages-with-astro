@@ -91,8 +91,8 @@ const getImageData = (fileName) => imageModules[`../assets/img/${fileName}`]?.de
                     <ul>
                         {allPublications.map(({ data: pub }) => (
                             <li>
-                                <article class="flex flex-row gap-4 mb-12">
-                                    <figure class="relative flex-3">
+                                <article class="flex flex-col md:flex-row gap-4 mb-12">
+                                    <figure class="relative md:flex-3 w-full">
                                         <Image 
                                             class="shadow rounded w-full object-cover" 
                                             src={getImageData(pub.image)} 
@@ -103,7 +103,7 @@ const getImageData = (fileName) => imageModules[`../assets/img/${fileName}`]?.de
                                         )}
                                         <span class="absolute -top-2 -left-2 text-xs bg-blue-900 text-white p-1 shadow">{pub.badge}</span>
                                     </figure>
-                                    <div class="flex-6">
+                                    <div class="md:flex-6">
                                         <h3 class="text-blue-950 font-bold mb-2"><a href={pub.links[0]?.href || '#'}>{pub.title}</a></h3>
                                         <span class="authors mb-2 block" set:html={formatText(pub.authors)}></span>
                                         <span class="conference italic mb-2 block" set:html={`${pub.date} · ${formatText(pub.venue)}`} />
