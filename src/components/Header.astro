@@ -22,13 +22,19 @@ import avatarImage from '../assets/img/avatar.png'
     <!-- Horizontal line before icons -->
     <div class="w-70 h-px bg-gray-300 my-4"></div>
     
-    <div class="flex">
+    <!-- Social / profile links -->
+    <div class="flex flex-row lg:flex-col items-center lg:items-start">
         {
             config.links &&
                 config.links.map((link: (typeof config.link)[0]) => (
-                    <a class="block me-4 last-of-type:me-0" href={link.href} target="_blank">
-                        <Icon icon={link.icon} class="w-6 h-6" title={link.title} />
+                    <a
+                        class="flex items-center me-4 last-of-type:me-0 lg:me-0 lg:mb-2"
+                        href={link.href}
+                        target="_blank"
+                    >
+                        <Icon icon={link.icon} class="w-6 h-6 shrink-0" title={link.title} />
                         <span class="sr-only">{link.title}</span>
+                        <span class="hidden lg:inline ms-2">{link.title}</span>
                     </a>
                 ))
         }
