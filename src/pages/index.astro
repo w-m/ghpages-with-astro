@@ -7,7 +7,7 @@ import config from '@config'
 
 import '@styles/global.css'
 
-import background from '../assets/background.svg'
+import background from '../assets/img/background.svg'
 import teaser from '../assets/teaser_example-2.png'
 import teaser2 from '../assets/teaser_example_2-2.png'
 
@@ -22,7 +22,7 @@ function formatText(text) {
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
 }
 // Import all images as URLs for publications
-const imageModules = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { eager: true, as: 'url' });
+const imageModules = import.meta.glob('../assets/img/*.{png,jpg,jpeg,svg}', { eager: true, as: 'url' });
 ---
 
 <!doctype html>
@@ -90,7 +90,7 @@ const imageModules = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { eager:
                             <li>
                                 <article class="flex flex-row gap-4 mb-12">
                                     <figure class="relative flex-3">
-                                        <img class="shadow rounded" src={imageModules[`../assets/${pub.image}`]} alt={pub.title} />
+                                        <img class="shadow rounded" src={imageModules[`../assets/img/${pub.image}`]} alt={pub.title} />
                                         {pub.figcaption && <figcaption class="text-xs text-gray-700 w-[95%] mx-auto mt-2">{pub.figcaption}</figcaption>}
                                         <span class="absolute -top-2 -left-2 text-xs bg-blue-900 text-white p-1 shadow">{pub.badge}</span>
                                     </figure>
