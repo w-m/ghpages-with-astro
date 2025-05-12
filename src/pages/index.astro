@@ -97,7 +97,7 @@ const getImageData = (fileName) => imageModules[`../assets/img/${fileName}`]?.de
                                             class="shadow rounded w-full object-cover"
                                             src={getImageData(pub.image)}
                                             alt={pub.title}
-                                            widths={[320, 400]}
+                                            widths={[320, 480, 640, 800, 1200]}
                                             sizes="(max-width: 768px) 100vw, 400px"
                                         />
                                         {pub.figcaption && (
