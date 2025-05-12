@@ -91,6 +91,10 @@
       href: https://w-m.github.io/3dgs-compression-survey/
     - title: GitHub
       href: https://github.com/w-m/3dgs-compression-survey
+    - title: arXiv
+      href: https://arxiv.org/abs/2407.09510
+    - title: Paper
+      href: https://doi.org/10.1111/cgf.70078
 
 - date: 2024
   slug: self-organizing-gaussians
@@ -106,12 +110,14 @@
     - Neural Rendering
     - 3D Reconstruction
   links:
-    - title: Paper
-      href: https://arxiv.org/pdf/2312.13299.pdf
+    - title: Project Page
+      href: https://fraunhoferhhi.github.io/Self-Organizing-Gaussians/
     - title: Code
       href: https://github.com/fraunhoferhhi/Self-Organizing-Gaussians
     - title: Poster
-      href: static/pdfs/Poster Self-Organizing Gaussians (ECCV).pdf
+      href: https://fraunhoferhhi.github.io/Self-Organizing-Gaussians/static/pdfs/Poster%20Self-Organizing%20Gaussians%20(ECCV).pdf
+    - title: arXiv
+      href: https://arxiv.org/abs/2312.13299
 
 - date: 2024
   slug: animatable-virtual-humans
@@ -150,7 +156,7 @@
   links:
     - title: Project Page
       href: https://fraunhoferhhi.github.io/X-maps/
-    - title: Paper (OpenAccess)
+    - title: Paper (CVF)
       href: https://openaccess.thecvf.com/content/CVPR2023W/EventVision/papers/Morgenstern_X-Maps_Direct_Depth_Lookup_for_Event-Based_Structured_Light_Systems_CVPRW_2023_paper.pdf
     - title: arXiv
       href: http://arxiv.org/abs/2402.10061
